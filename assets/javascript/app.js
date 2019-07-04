@@ -29,6 +29,13 @@ function _(x){
 }
 function renderQuestion(){
   quiz =_("quiz");
+  if(pos >= questions.length){
+    quiz.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    _("quizStatus").innerHTML = "Quiz Completed";
+    pos =0;
+    correct =0;
+    return false;
+  }
   _("quizStatus").innerHTML = "Question "+(pos+1) +" of "+questions.length;
   question = questions[pos][0];
   answer1 = questions[pos][1];
@@ -59,3 +66,4 @@ function checkAnswer(){
   renderQuestion();
 }
 window.addEventListener("load", renderQuestion, false);
+//is the player on the last question
