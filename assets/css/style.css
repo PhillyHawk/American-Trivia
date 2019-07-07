@@ -1,15 +1,32 @@
+body{
+  background-image: url("https://ktfnews.com/wp-content/uploads/2017/08/https-blueprint-api-production.s3.amazonaws.com-uploads-card-image-280895-Lawn-In-Front-Of-The-White-House.jpg");
+  background-position: center;
+}
 .title{
   color: royalblue;
-  font-size: 30px;
-  font-family: 'Times New Roman', Times, serif;
-  margin-left: 200px;
+  font-size: 40px;
+  font-family: 'Great Vibes', cursive;   
+  text-align: center;
+  text-shadow:5px 5px 10px red;
 }
-#quizStatus{
-  margin-left: 200px;
+#test_status{
+  text-align: center;
+
+}
+#timeleft{
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin-right: 450px;
+  margin-left: 450px;
+  
 }
 
-#quiz{
-  border: 2px solid black;
+#test{
+  border: 4px solid black;
   padding: 10px 40px 40px 40px;
   margin-right: 400px;
-  margin-left: 200px;
+  margin-left: 400px;
+  font-size: 24px;
+  color:black;
+  background: rgba(255, 255, 255, 0.5)
+}
