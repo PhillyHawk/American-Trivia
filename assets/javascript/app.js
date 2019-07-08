@@ -9,9 +9,9 @@ function myTimer() {
     cursec=timelimit%60;
     if (curmin!=0) { curtime=curmin+" minutes and "+cursec+" seconds left"; }
               else { curtime=cursec+" seconds left"; }
-    $_('timeleft').innerHTML = curtime;
+    $('timeleft').innerHTML = curtime;
   } else {
-    $_('timeleft').innerHTML = timelimit+' - Out of Time - Impeachment!!!';
+    $('timeleft').innerHTML = timelimit+' - Out of Time - Impeachment!!!';
     clearInterval(myVar);
   }
   timelimit--;
@@ -39,29 +39,32 @@ let questions = [
   
    
 ];
+//chose a new question in array
 let questionOrder = [];
 function setQuestionOrder() {
  questionOrder.length = 0;
  for (var i=0; i<questions.length; i++) { questionOrder.push(i); }
  questionOrder.sort(randOrd);  
- pos = 0;  posNum = questionOrder[pos];
+ pos = 0;  
+ posNum = questionOrder[pos];
 }
-
-function $_(check) { return document.getElementById(check); }
+//randomly choose question
+function $(check) { return document.getElementById(check); }
 function randOrd() { return (Math.round(Math.random())-0.5); }
 function renderResults(){
-  let test = $_("test");
+  let test = $("test");
   test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
-  $_("test_status").innerHTML = "Term Completed";
-  $_('timeleft').innerHTML = '';
+  $("test_status").innerHTML = "Term Completed";
+  $('timeleft').innerHTML = '';
   setQuestionOrder();
   correct = 0;
   clearInterval(myVar);
   return false;
 }
+//questions box 
 function renderQuestion() {
-  let test = $_("test");
-  $_("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+  let test = $("test");
+  $("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
   let question = questions[posNum][0];
   let choiceA = questions[posNum][1];
   let choiceB = questions[posNum][2];
@@ -77,7 +80,7 @@ function renderQuestion() {
   clearInterval(myVar);
   startTimer();
 }
-
+//check to see if answers are correct
 function checkAnswer(){
   let choices = document.getElementsByName("choices");
   for (var i=0; i<choices.length; i++) {
@@ -94,7 +97,7 @@ window.onload = function() {
   renderQuestion();
 }
 
-
+console.log([5]);
 console.log("correct");
 
 
@@ -181,28 +184,4 @@ console.log("correct");
 //   //moves to next question
 //   pos++;
 //   renderQuestion();
-// }
-// window.addEventListener("load", renderQuestion, false);
-// //is the player on the last question
-// var limit="00:10"
-// if (document.images){
-// var parselimit=limit.split(":")
-// parselimit=parselimit[0]*60+parselimit[1]*1
-// }
-// function begintimer(){
-// if (!document.images)
-// return
-// if (parselimit==1)
-// window.location="msg.html"
-// else{ 
-// parselimit-=1
-// curmin=Math.floor(parselimit/60)
-// cursec=parselimit%60
-// if (curmin!=0)
-// curtime=curmin+" minutes and "+cursec+" seconds left"
-// else
-// curtime=cursec+" seconds left"
-// window.status=curtime
-// setTimeout("begintimer()",1000)
-// }
 // }

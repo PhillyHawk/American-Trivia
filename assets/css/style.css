@@ -36,3 +36,9 @@ button{
   background: white;
   color: blue;
 }
+button:hover{
+  background: red;
+}
+label:hover{
+  color: blue;
+}
