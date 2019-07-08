@@ -14,10 +14,12 @@ body{
 
 }
 #timeleft{
-  background: rgba(255, 255, 255, 0.5);
+  background:black;
+  color: green;
+  font-family: 'Orbitron', sans-serif;
   text-align: center;
-  margin-right: 450px;
-  margin-left: 450px;
+  margin-right: 500px;
+  margin-left: 500px;
   
 }
 
@@ -29,4 +31,8 @@ body{
   font-size: 24px;
   color:black;
   background: rgba(255, 255, 255, 0.5)
+}
+button{
+  background: white;
+  color: blue;
 }
