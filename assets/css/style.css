@@ -12,7 +12,8 @@ body{
 }
 #test_status{
   text-align: center;
-
+  font-family: 'Great Vibes', cursive;  
+  font-size: 24px;
 }
 #timeleft{
   background:black;
