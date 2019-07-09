@@ -1,6 +1,7 @@
 body{
   background-image: url("https://ktfnews.com/wp-content/uploads/2017/08/https-blueprint-api-production.s3.amazonaws.com-uploads-card-image-280895-Lawn-In-Front-Of-The-White-House.jpg");
   background-position: center;
+  position: relative;
 }
 .title{
   color: royalblue;
@@ -38,6 +39,7 @@ button{
 }
 button:hover{
   background: red;
+  color: white;
 }
 label:hover{
   color: blue;
